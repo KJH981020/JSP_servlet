@@ -121,6 +121,17 @@ dao.close();
 	                </button></td>
 	        </tr>
 	    </table>
+	    
+	    int pageSize = Integer.parseInt(application.getInitParameter("POSTS_PER_PAGE"));
+	    int blackPage = Integer.parseInt();
+	    
+	    int pageNum = 1;
+	    String pageTemp = request.getParameter("pageNum");
+	    if(pageTemp != null && pageTmp.equals(""))
+	    	pageNum = Integer.parseInt(pageTemp);
+	    	dao.close();
+	    
+	    virtualNum = totalCount - (((pageNum - 1) * pageSize) + countNUm++);g
 	</body>
 
 </html>
