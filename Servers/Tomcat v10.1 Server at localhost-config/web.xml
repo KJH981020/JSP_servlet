@@ -113,7 +113,18 @@
   <!--                       Note that while RFC 7231 clarified that such a -->
   <!--                       PUT with a Content-Range header field is a bad -->
   <!--                       request, RFC 9110 (which obsoletes RFC 7231)   -->
-  <!--                       now allows partial PUT. [true]                 -->
+  <!--                       now allows partial PUT. [true]   
+                -->
+                
+    <servlet>  <!-- 서블릿 등록 -->
+		<servlet-name>HelloServlet</servlet-name>	<!-- 서블릿 참조할 때 사용할 이름 -->
+		<servlet-class>servlet.HelloServlet</servlet-class>	<!-- 서블릿을 패키지포함 명시 -->
+	</servlet>	
+	<servlet-mapping>   <!-- 서블릿과 요청명(요청 URL) 매핑 -->
+		<servlet-name>HelloServlet</servlet-name>	<!-- <servlet>에서 사용할 이름과 동일 -->
+		<url-pattern>/12Servlet/HelloServlet.do</url-pattern>	<!-- 요청명으로 사용할 경로 -->
+	</servlet-mapping>
+    
 
     <servlet>
         <servlet-name>default</servlet-name>
