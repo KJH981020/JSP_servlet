@@ -20,7 +20,7 @@
 		<fmt:formatNumber value="10000" type="currency" /> /
 		<fmt:formatDate value="${ today }" /><br />
 		
-		영어로 설정 : <fmt:setLocale value="ko_kr" />
+		영어로 설정 : <fmt:setLocale value="en_US" />
 		<fmt:formatNumber value="10000" type="currency" /> /
 		<fmt:formatDate value="${ today }" /><br />
 		

@@ -116,17 +116,20 @@
   <!--                       now allows partial PUT. [true]                 -->
 
     <servlet>
-        <servlet-name>default</servlet-name>
-        <servlet-class>org.apache.catalina.servlets.DefaultServlet</servlet-class>
+        <servlet-name>MemberAuth</servlet-name>
+        <servlet-class>servlet.MemberAuth</servlet-class>
         <init-param>
-            <param-name>debug</param-name>
-            <param-value>0</param-value>
+            <param-name>admin_id</param-name>
+            <param-value>nakja</param-value>
         </init-param>
-        <init-param>
-            <param-name>listings</param-name>
-            <param-value>false</param-value>
-        </init-param>
+        </servlet>
+        <servlet>
+        <servlet-mapping>
+            <servlet-name>MemberAuth</servlet-name>
+            <url-pattern>12Servlet/MemberAuth.mvc</url-pattern>
+         </servlet-mapping>
         <load-on-startup>1</load-on-startup>
+        
     </servlet>
 
 
