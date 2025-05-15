@@ -116,8 +116,12 @@
   <!--                       now allows partial PUT. [true]                 -->
 
     <servlet>
-        <servlet-name>default</servlet-name>
-        <servlet-class>org.apache.catalina.servlets.DefaultServlet</servlet-class>
+        <servlet-name>MVCBoardwrite</servlet-name>
+        <servlet-class>model2.mvcboard.Writecontroller</servlet-class>
+        <multipart-config>
+        <max-file-size>1048576</max-file-size>
+        <max-request-size>10485760</max-request-size>
+        </multipart-config>
         <init-param>
             <param-name>debug</param-name>
             <param-value>0</param-value>
@@ -128,6 +132,10 @@
         </init-param>
         <load-on-startup>1</load-on-startup>
     </servlet>
+    <servlet-mapping>
+    <servlet-name>MVCBoardWrite</servlet-name>
+    <url-pattern>mvcboard.write.do</url-pattern>
+    </servlet-mapping>
 
 
   <!-- The JSP page compiler and execution servlet, which is the mechanism  -->
